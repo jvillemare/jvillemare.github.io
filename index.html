@@ -9,59 +9,206 @@
 		<meta name="description" content="All the things I've done and can put in a website.">
 		<meta name="author" content="James Villemarette">
 
+		<!-- JQuery Slim -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
+		<!-- Boostrap UI -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- Image Viewer -->
+		<link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.6.1/viewer.min.css" integrity="sha256-F2elWW/CVHVBSZ/hgLsp2nRWjYWDINFcR080a0G+lG0=" crossorigin="anonymous" />
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.6.1/viewer.min.js" integrity="sha256-F8ROX1+ZAmKfr0OUWGHFcgd18tC8mGko+1Tt9vl0vv4=" crossorigin="anonymous"></script>
+
+		<!-- Fancy Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+
+		<style type="text/css">
+			body {
+				background: #00539F;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to bottom, #00539F, #00294f);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to bottom, #00539F, #00294f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+			.font-playfair {
+				font-family: 'Playfair Display', serif;
+			}
+		</style>
 
 	</head>
 	<body class="bg-light" style="overflow-x:hidden">
 		<div class="row pt-3">
 			<div class="col-1 col-md-3"></div>
 			<div class="col-10 col-md-6">
-				<h1>James Villemarette</h1>
-				<h3>BS, Computer Science Major <i>extraordinaire</i></h3>
-				<p>
-					Trying to do good and crazy things with these new fangled computers.
-				</p>
-				<hr>
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav mx-auto">
-							<li class="nav-item">
-								<a class="nav-link" href="https://www.linkedin.com/in/james-villemarette/">LinkedIn</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="https://github.com/jvillemare">GitHub</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-				<hr>
-				<h2 id="projects">Projects</h2>
-				<p>
-					I've done a few personal projects outside of school and work, over the years.
-				</p>
-				<div class="border-left pl-3">
-					<p class="text-center">
-						<i>April, 2020</i>
+				<div class="text-light mt-5">
+					<h1 class="display-3 font-playfair">James Villemarette</h1>
+					<h2>
+						<abbr title="Bachelor of Science">BS</abbr>, Computer Science Major <i>extraordinaire</i><br>
+						at the University of Delaware
+					</h2>
+					<p class="lead">
+						Trying to do good and crazy things with tech.
 					</p>
-					<h3>YoUDee Finder</h3>
-					<p>
-						I trained a TensorFlow ML model with 3,000 sample images to recognize my university mascot, YoUDee.
-					</p>
-					<div class="mb-3">
-						<a class="btn btn-primary" href="/youdee-finder/" role="button" title="Link to test the ML model with your own webcam.">Try It Out</a>
-						<a class="btn btn-secondary" href="https://github.com/jvillemare/youdee-finder" role="button" title="Go to the GitHub repo for this project.">GitHub Repo</a>
-					</div>
-					<img src="rsc/img/youdee-finder.jpg" class="rounded img-fluid" alt="Screenshot of ML Model properly recognizing YoUDee in a video">
 				</div>
 				<hr>
-				<!--
-				<h3>fcpd.us CompStats</h3>
-				-->
+				<div class="d-flex justify-content-center">
+					<a class="btn btn-warning btn-lg mr-3" href="https://www.linkedin.com/in/james-villemarette/" title="Go to my LinkedIn.">LinkedIn</a>
+					<a class="btn btn-warning btn-lg" href="https://github.com/jvillemare" title="Go to my GitHub.">GitHub</a>
+				</div>
+				<hr>
+				<div class="text-light">
+					<h1 id="projects">Projects</h1>
+					<p class="lead">
+						I've done a few personal projects outside of school and work, over the years. Sorted by importance, not date.
+					</p>
+				</div>
+				<div class="mt-4">
+
+					<!-- Open Internet Courts -->
+
+					<div class="card mb-4">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-lg">
+									<img loading="lazy" src="rsc/img/oic-compressed.jpg" data-original="rsc/img/oic-original.jpg" class="rounded img-fluid previewable-image" alt="The homepage of the OIC." title="Click the image to see a large preview.">
+								</div>
+								<div class="col-lg">
+									<h2 class="font-playfair mt-1 mb-3">Open Internet Courts</h2>
+									<p>
+										Inspired from mock-trial clubs: I made a custom, NodeJS website from scratch that creates a mock-court system. It allows cases to be submitted, deliberated, appealed, and decided upon. There is a jury selection, lawyer, BAR exam, judge, and other systems to make it functional. Hosted directly with Amazon Web Services.
+									</p>
+									<div class="mb-3">
+										<a class="btn btn-primary btn-lg" href="https://open.internetcourts.net/" role="button" title="Link to the website.">Try It Out</a>
+										<a class="btn btn-secondary btn-lg" href="https://github.com/jvillemare/oic" role="button" title="Go to the GitHub repo for this project.">GitHub Repo</a>
+									</div>
+									<p class="text-secondary">
+										<i>Started in December, 2018</i>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Police Accountability Dataset -->
+
+					<!-- WIP
+					<div class="card mb-4">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-lg">
+									<img loading="lazy" src="rsc/img/oic-compressed.jpg" data-original="rsc/img/oic-original.jpg" class="rounded img-fluid previewable-image" alt="........................" title="Click the image to see a large preview.">
+								</div>
+								<div class="col-lg">
+									<h2 class="font-playfair mt-1 mb-3">Police Accountability Dataset</h2>
+									<p>
+										There is no national, public or transparent, accessible, or usable database of police violence and brutality that spans more than a a few years. The FBI committed to making a national use of force database in 2018, but that has not been released publicly, and it's only on an opt-in basis. Many problematic officers simply move from one department to another.
+									</p>
+									<p>
+										Along with a few contributors, we built a publicly-accessible, standardized, and searchable database of police violence from past decades of data, to the present, and forward.
+									</p>
+									<div class="mb-3">
+										<a class="btn btn-primary btn-lg" href="https://policeaccountability.github.io/brutality/" role="button" title="Link to the website.">Try It Out</a>
+										<a class="btn btn-secondary btn-lg" href="https://github.com/PoliceAccountability/brutality" role="button" title="Go to the GitHub repo for this project.">GitHub Repo</a>
+									</div>
+									<p class="text-secondary">
+										<i>Started in June, 2020</i>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					-->
+
+					<!-- Aloe-ha: JavaFX Garden Plot Designer -->
+
+					<div class="card mb-4">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-lg">
+									<img loading="lazy" src="rsc/img/aloe-ha-compressed.png" data-original="rsc/img/aloe-ha-original.png" class="rounded img-fluid previewable-image" alt="Screenshot of the welcome screen of our garden plot designer app." title="Click the image to see a large preview.">
+								</div>
+								<div class="col-lg">
+									<h2 class="font-playfair mt-1 mb-3">Aloe-ha: JavaFX Garden Plot Designer</h2>
+									<p>
+										For a Software Engineering class group project, we designed a garden plot designer for a client per their specifications. With about 100,000 lines of Java code, it has a colection of over 4,000 native and non-native North American plants to choose from, save/load functionality, and more.
+									</p>
+									<div class="mb-3">
+										<a class="btn btn-primary btn-lg" href="https://villemarette.me/aloe-ha/" role="button" title="Go to the product site for this app.">Try It Out</a>
+										<a class="btn btn-secondary btn-lg" href="https://github.com/jvillemare/aloe-ha" role="button" title="Go to the GitHub repo for this project.">GitHub Repo</a>
+									</div>
+									<p class="text-secondary">
+										<i>Started in June, 2020</i>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- YoUDee Finder -->
+
+					<div class="card mb-4">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-lg">
+									<img loading="lazy" src="rsc/img/youdee-finder-compressed.jpg" data-original="rsc/img/youdee-finder-original.jpg" class="rounded img-fluid previewable-image" alt="Screenshot of ML Model properly recognizing YoUDee in a video" title="Click the image to see a large preview.">
+								</div>
+								<div class="col-lg">
+									<h2 class="font-playfair mt-1 mb-3">YoUDee Finder</h2>
+									<p>
+										I trained a TensorFlow ML model with 3,000+ sample images to recognize my university mascot, YoUDee. Images were scrapped from manually selected Instagram, Twitter, and other pages.
+									</p>
+									<div class="mb-3">
+										<a class="btn btn-primary btn-lg" href="https://villemarette.me/youdee-finder/" role="button" title="Link to test the ML model with your own webcam.">Try It Out</a>
+										<a class="btn btn-secondary btn-lg" href="https://github.com/jvillemare/youdee-finder" role="button" title="Go to the GitHub repo for this project.">GitHub Repo</a>
+									</div>
+									<p class="text-secondary">
+										<i>Started in April, 2020</i>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Instructure Canvas Dark Theme -->
+
+					<!-- WIP: Uploading...
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-lg">
+									<img loading="lazy" src="rsc/img/canvas-dark-compressed.jpg" data-original="rsc/img/canvas-dark-original.jpg" class="rounded img-fluid previewable-image" alt="Screenshot of the dark theme applied to our university course site." title="Click the image to see a large preview.">
+								</div>
+								<div class="col-lg">
+									<h2 class="font-playfair mt-1 mb-3">Instructure Canvas Dark Theme</h2>
+									<p>
+										I made a dark CSS theme for the site that University of Delaware uses for most courses to submit assignments online.
+									</p>
+									<div class="mb-3">
+										<a class="btn btn-secondary btn-lg" href="https://github.com/jvillemare/youdee-finder" role="button" title="Go to the GitHub gist (single code file) for this project.">GitHub Gist</a>
+									</div>
+									<p class="text-secondary">
+										<i>Started in May, 2020</i>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					-->
+				</div>
+				<hr>
 			</div>
 			<div class="col-1 col-md-3"></div>
 		</div>
+		<script type="text/javascript">
+			// setup image previewer
+			var viewers = [];
+			$(document).ready(function() {
+				$.each($('.previewable-image'), function(index, value) {
+					viewers.push(new Viewer(value, {
+						url: 'data-original',
+						toolbar: false
+					}));
+				});
+			});
+		</script>
 	</body>
 </html>
