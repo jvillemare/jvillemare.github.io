@@ -29,30 +29,36 @@
 				background: -webkit-linear-gradient(to bottom, #00539F, #00294f);  /* Chrome 10-25, Safari 5.1-6 */
 				background: linear-gradient(to bottom, #00539F, #00294f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 			}
+			hr {
+				border-top-color: #fff;
+			}
 			.font-playfair {
 				font-family: 'Playfair Display', serif;
 			}
 		</style>
 
 	</head>
-	<body class="bg-light" style="overflow-x:hidden">
+	<body class="bg-light" style="overflow-x: hidden">
 		<div class="row pt-3">
 			<div class="col-1 col-md-3"></div>
 			<div class="col-10 col-md-6">
-				<div class="text-light mt-5">
-					<h1 class="display-3 font-playfair">James Villemarette</h1>
-					<h2>
-						<abbr title="Bachelor of Science">BS</abbr>, Computer Science Major <i>extraordinaire</i><br>
-						at the University of Delaware
-					</h2>
-					<p class="lead">
-						Trying to do good and crazy things with tech.
-					</p>
-				</div>
-				<hr>
-				<div class="d-flex justify-content-center">
-					<a class="btn btn-warning btn-lg mr-3" href="https://www.linkedin.com/in/james-villemarette/" title="Go to my LinkedIn.">LinkedIn</a>
-					<a class="btn btn-warning btn-lg" href="https://github.com/jvillemare" title="Go to my GitHub.">GitHub</a>
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="text-light mt-5">
+							<h1 class="display-3 font-playfair">James Villemarette</h1>
+							<h2>
+								<abbr title="Bachelor of Science">BS</abbr>, Computer Science Major <i>extraordinaire</i><br>
+								at the University of Delaware
+							</h2>
+							<p class="lead">
+								Trying to do good and crazy things with tech.
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4 d-flex justify-content-center align-items-end">
+							<a class="btn btn-warning btn-lg mr-3" href="https://www.linkedin.com/in/james-villemarette/" title="Go to my LinkedIn.">LinkedIn</a>
+							<a class="btn btn-warning btn-lg" href="https://github.com/jvillemare" title="Go to my GitHub.">GitHub</a>
+					</div>
 				</div>
 				<hr>
 				<div class="text-light">
@@ -65,14 +71,16 @@
 
 					<!-- Open Internet Courts -->
 
-					<div class="card mb-4">
+					<div class="card mb-4" id="project-oic">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-lg">
 									<img loading="lazy" src="rsc/img/oic-compressed.jpg" data-original="rsc/img/oic-original.jpg" class="rounded img-fluid previewable-image" alt="The homepage of the OIC." title="Click the image to see a large preview.">
 								</div>
 								<div class="col-lg">
-									<h2 class="font-playfair mt-1 mb-3">Open Internet Courts</h2>
+									<h2 class="font-playfair mt-1 mb-3">
+										Open Internet Courts <a href="#project-oic" title="Get a direct link to this project on this page.">#</a>
+									</h2>
 									<p>
 										Inspired from mock-trial clubs: I made a custom, NodeJS website from scratch that creates a mock-court system. It allows cases to be submitted, deliberated, appealed, and decided upon. There is a jury selection, lawyer, BAR exam, judge, and other systems to make it functional. Hosted directly with Amazon Web Services.
 									</p>
@@ -91,14 +99,16 @@
 					<!-- Police Accountability Dataset -->
 
 					<!-- WIP
-					<div class="card mb-4">
+					<div class="card mb-4" id="project-police">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-lg">
 									<img loading="lazy" src="rsc/img/oic-compressed.jpg" data-original="rsc/img/oic-original.jpg" class="rounded img-fluid previewable-image" alt="........................" title="Click the image to see a large preview.">
 								</div>
 								<div class="col-lg">
-									<h2 class="font-playfair mt-1 mb-3">Police Accountability Dataset</h2>
+									<h2 class="font-playfair mt-1 mb-3">
+										Police Accountability Dataset <a href="#project-police" title="Get a direct link to this project on this page.">#</a>
+									</h2>
 									<p>
 										There is no national, public or transparent, accessible, or usable database of police violence and brutality that spans more than a a few years. The FBI committed to making a national use of force database in 2018, but that has not been released publicly, and it's only on an opt-in basis. Many problematic officers simply move from one department to another.
 									</p>
@@ -120,14 +130,16 @@
 
 					<!-- Aloe-ha: JavaFX Garden Plot Designer -->
 
-					<div class="card mb-4">
+					<div class="card mb-4" id="project-aloe-ha">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-lg">
 									<img loading="lazy" src="rsc/img/aloe-ha-compressed.png" data-original="rsc/img/aloe-ha-original.png" class="rounded img-fluid previewable-image" alt="Screenshot of the welcome screen of our garden plot designer app." title="Click the image to see a large preview.">
 								</div>
 								<div class="col-lg">
-									<h2 class="font-playfair mt-1 mb-3">Aloe-ha: JavaFX Garden Plot Designer</h2>
+									<h2 class="font-playfair mt-1 mb-3">
+										Aloe-ha: A JavaFX Garden Plot Designer <a href="#project-aloe-ha" title="Get a direct link to this project on this page.">#</a>
+									</h2>
 									<p>
 										For a Software Engineering class group project, we designed a garden plot designer for a client per their specifications. With about 100,000 lines of Java code, it has a colection of over 4,000 native and non-native North American plants to choose from, save/load functionality, and more.
 									</p>
@@ -145,14 +157,16 @@
 
 					<!-- YoUDee Finder -->
 
-					<div class="card mb-4">
+					<div class="card mb-4" id="project-youdee">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-lg">
 									<img loading="lazy" src="rsc/img/youdee-finder-compressed.jpg" data-original="rsc/img/youdee-finder-original.jpg" class="rounded img-fluid previewable-image" alt="Screenshot of ML Model properly recognizing YoUDee in a video" title="Click the image to see a large preview.">
 								</div>
 								<div class="col-lg">
-									<h2 class="font-playfair mt-1 mb-3">YoUDee Finder</h2>
+									<h2 class="font-playfair mt-1 mb-3">
+										YoUDee Finder <a href="#project-youdee" title="Get a direct link to this project on this page.">#</a>
+									</h2>
 									<p>
 										I trained a TensorFlow ML model with 3,000+ sample images to recognize my university mascot, YoUDee. Images were scrapped from manually selected Instagram, Twitter, and other pages.
 									</p>
@@ -171,14 +185,16 @@
 					<!-- Instructure Canvas Dark Theme -->
 
 					<!-- WIP: Uploading...
-					<div class="card">
+					<div class="card" id="project-instructure">
 						<div class="card-body">
 							<div class="row">
 								<div class="col-lg">
 									<img loading="lazy" src="rsc/img/canvas-dark-compressed.jpg" data-original="rsc/img/canvas-dark-original.jpg" class="rounded img-fluid previewable-image" alt="Screenshot of the dark theme applied to our university course site." title="Click the image to see a large preview.">
 								</div>
 								<div class="col-lg">
-									<h2 class="font-playfair mt-1 mb-3">Instructure Canvas Dark Theme</h2>
+									<h2 class="font-playfair mt-1 mb-3">
+										Instructure Canvas Dark Theme <a href="#project-instructure" title="Get a direct link to this project on this page.">#</a>
+									</h2>
 									<p>
 										I made a dark CSS theme for the site that University of Delaware uses for most courses to submit assignments online.
 									</p>
@@ -195,6 +211,9 @@
 					-->
 				</div>
 				<hr>
+				<p class="text-center text-white">
+					Last updated on June 24th, 2020.
+				</p>
 			</div>
 			<div class="col-1 col-md-3"></div>
 		</div>
