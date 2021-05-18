@@ -1,7 +1,8 @@
 # jvillemare.github.io
 
-See the website at any of the following links:
- - https://villemarette.me/
- - https://james.villemarette.me/
+Hey! Funny seeing you here. This is my personal website. Thank you kindly, GitHub, for the free hosting.
 
-Work in progress.
+ - [See my happenings/activity/whatever here.](https://villemarette.me/)
+ - [I also write! Here's my blog index.](https://villemarette.me/blog)
+
+After about two years, it's finally at a stage that I like.
