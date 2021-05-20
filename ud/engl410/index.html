@@ -1,229 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+
+		<!-- Boilerplate -->
 		<meta charset="utf-8">
+		<meta name=viewport content="width=device-width, initial-scale=1">
 
 		<title>ENGL 410 Portfolio</title>
 		<meta name="description" content="A collection of things I did for my ENGL 410: Technical Writing class at the University of Delaware">
 		<meta name="author" content="James Villemarette">
 
+		<!-- SEO -->
+		<meta property="og:type" content="article" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:title" content="How to Become an SEO Expert (8 Steps)" />
+		<meta property="og:description" content="Get from SEO newbie to SEO pro in 8 simple steps." />
+		<meta property="og:image" content="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png" />
+
+		<!-- JQuery, Popper, Bootstrap (CSS & JS); In that order -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha512-ubuT8Z88WxezgSqf3RLuNi5lmjstiJcyezx34yIU2gAHonIi27Na7atqzUZCOoY4CExaoFumzOsFQ2Ch+I/HCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-		<style>
+		<!-- Custom Styling Fixes -->
+		<style type="text/css">
 			.sticky {
 				position: fixed;
 				z-index: 100;
+				top: 16px;
+				right: 16px;
+			}
+			/* dark mode fixes */
+			hr {
+				border-top: 1px solid rgba(255,255,255,.1);
+			}
+			.bg-gray {
+				background-color: #40474f;
+			}
+			.bg-gray-2 {
+				background-color: #4c5560;
+			}
+			.figure-caption {
+				color: #a2b0bc;
+			}
+			.text-secondary {
+				color: #CCCCCC !important;
+			}
+			a {
+				color: #A3D0FF;
+			}
+			.regular-a {
+				color: #007bff;
 			}
 		</style>
 
 	</head>
-	<body data-spy="scroll" data-target="#list-example" data-offset="30">
+	<body data-spy="scroll" data-target="#list-example" data-offset="30" class="bg-dark text-white">
+		<div class="sticky" data-toggle="tooltip" data-placement="left" title="Click this button to open the Table of Contents modal." id="tooltip1">
+			<button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#tableOfContentsModal">
+				📖
+			</button>
+		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-2 pt-3 sticky">
-					<h4>Table of Contents</h4>
-					<p>
-						Click any of the links below to go to that section, directly.
-					</p>
-					<div id="list-example" class="list-group">
-						<a class="list-group-item list-group-item-action" href="#introduction">
-							Introduction
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pi-1">
-							Specialized Tools
-							<span class="badge badge-primary">P</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pi-2">
-							Shell Signage
-							<span class="badge badge-primary">P</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pi-3">
-							Origami Instructions
-							<span class="badge badge-primary">P</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pi-4">
-							Tech Tip
-							<span class="badge badge-primary">P</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pi-5">
-							Data Viz
-							<span class="badge badge-primary">P</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pi-6">
-							Menu Revision
-							<span class="badge badge-primary">P</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pi-7">
-							Color Palette
-							<span class="badge badge-primary">P</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pa-8">
-							ELI5
-							<span class="badge badge-warning">A</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pa-9">
-							User Instructions
-							<span class="badge badge-warning">A</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pa-10">
-							Mobile Health
-							<span class="badge badge-warning">A</span>
-						</a>
-						<a class="list-group-item list-group-item-action" href="#pa-11">
-							Screencast Video
-							<span class="badge badge-warning">A</span>
-						</a>
-					</div>
-					<!-- maybe delete below? -->
-					<h4 class="mt-3">Miscellaneous</h4>
-					<p>
-						<a href="../../">Click here to see my personal website.</a>
-					</p>
-				</div>
-				<div class="col-sm-9">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-3"></div>
-				<div class="col-sm-9 pt-3">
+			<div class="">
+				<div class=" pt-3">
 					<div>
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="../../" class="regular-a">Home</a></li>
+								<li class="breadcrumb-item"><a href="../" class="regular-a">UD</a></li>
+								<li class="breadcrumb-item active" aria-current="page">ENGL 410</li>
+							</ol>
+						</nav>
 						<h2 id="introduction">Introduction</h4>
 						<p>
 							Hello! I am James Villemarette, and welcome to my portfolio for my ENGL 410 (Technical Writing) course that I took at the University of Delaware in Spring of 2021.
 						</p>
 						<p>
-							On the left is the <i>table of contents</i>. It's called a scrollspy, because it spies on your scrolling, and tells you where you are in this page. Please note:
+							You can click the 📖 button in the top right to open the <i>table of contents</i>. Please also note:
 						</p>
 						<ul>
 							<li><span class="badge badge-primary">P</span> means <b>prompt</b>, as in a small project that was done over the course of the semester.</li>
-							<li><span class="badge badge-warning">A</span> means <b>assignment</b>, as in substantial work that was done in a few weeks.</li>
+							<li><span class="badge badge-warning">A</span> means <b>assignment</b>, as in substantial work that was done in a few weeks or less time.</li>
 							<li>The prompts and the assignments are placed in order of what I think looks great first.</li> <!-- TODO: maybe reword? -->
+							<li>This dark theme is not native to the Bootstrap UI framework. However, I have ensured that it passes WCAG AA web accessibility standards.</li>
+							<li>The &#10138; HTML icon indicates that a link opens in a new tab.</li>
+							<li>Please make sure that you have not disabled JavaScript, as the carousel in <a href="#pa-8">ELI5 assignment</a> uses JavaScript to be interactive.</li>
+							<li>This website was made from scratch with ❤️ (and Bootstrap).</li>
 						</ul>
 						<hr>
 						<h2 id="pi-1">
-							Specialized Tools
-							<span class="badge badge-primary">Prompt</span>
+							Specialized Tools&nbsp;
+							<span class="badge badge-primary">Prompt</span>&nbsp;
 							<a href="#pi-1" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
 						<p>
-							.....
+							For our first portfolio prompt, we were given the following directions:  Search the <a href="https://www.reddit.com/r/specializedtools/" target="_blank" title="Click this link to open it in a new page.">r/specializedtools subreddit &#10138;</a>, and find two tools.  Then, for each tool, we were to write a description, explaining its function and appearance to someone who may have never seen it before. Then, we were to reflect on what techniques we used in each paragraph explanation.
 						</p>
-						<p class="mb-1">
-							<b>Bubble Wrap Making Machine</b>
+						<p>
+							Try reading one paragraph below, then click on its accompanying link (in the sub-bulletpoints) to see if it makes sense. Did it look like what you expected?
 						</p>
-						<ul>
-							<li>This machine creates bubble wrap from a single roll of double-layer plastic, filling air in equidistant spots, and sealing the wrap with heat to form another roll of bubble bubble wrap. The machine uses two rollers, one where it pulls the double-layer plastic from, and the other where the final product of bubble wrap is stored. The plastic wrap goes through a few rollers, where first air is injected by one of 13 air tubes, and then immediately sealed by another roller that is heated. The rollers are just cylinders that are anchored on one side. It operates by itself until the source plastic is emptied. The machine itself is not in a protected enclosure, and so the plastic is just slotted in, like magnetic tape in a player, or like the tape in a cassette.</li>
-							<ul>
-								<li>
-									<b>Source:</b> <a href="https://www.reddit.com/r/specializedtools/comments/m5224j/this_bubble_wrap_machine/" target="_blank" title="Click this link to open it in a new page.">"This Bubble Wrap Machine" by The_Tech_Monkey on reddit</a>
-								</li>
-								<li>
-									<b>Reflection:</b> My main strategy in the above explanation is to work through the steps of the process, as well as increase the depth of the explanations in each new sentence. I also used imagery and analogy to describe the machine. Rereading it myself, outloud, I think it makes sense.
-								</li>
-							</ul>
-						</ul>
-						<p class="mb-1">
-							<b>Portable High-rise Apartment Moving Elevator Vehicle</b>
+						<div class="card mb-3">
+							<div class="card-body bg-gray text-white">
+								<p class="mb-1">
+									<b>Portable High-rise Apartment Moving Elevator Vehicle</b>
+								</p>
+								<ul>
+									<li>Imagine if you had to move into a high-rise apartment -- that does not have an elevator -- in a narrow street, how would you go about it? Your best bet is to raise your heavy furniture or other goods with a Portable Vehicle Delivery Elevator. It is hitched and towed with your moving truck. When you arrive at your destination, strong stabilizers are extended along each side of the elevator, and make contact with the road at an acute angle, which helps keep the elevator stable. Then, like a fireman’s ladder, the backbone of the elevator extends to the window of your apartment. Then, a flat, seat-like car goes up the backbone to your apartment window, where your furniture and goods can be easily moved in. Then, the car goes back down the backbone to pick up more goods. The reverse of this process happens for if or when you move out.</li>
+									<ul>
+										<li>
+											<b>Source:</b> <a href="https://www.reddit.com/r/specializedtools/comments/m1dbov/machine_for_helping_people_move_in_small_towns/" target="_blank" title="Click this link to open it in a new page.">"Machine for helping people move in small towns" by fibeep on reddit &#10138;</a>.
+										</li>
+										<li>
+											<b>Reflection:</b> My approach here for this second specialized tool was to explain it like I would to a friend. Hooking them in with why you would need it. Then some technical description followed by analogies of backbone and firemen’s ladder. I think the more informal explanation here helps.
+										</li>
+									</ul>
+								</ul>
+								<p class="mb-1">
+									<b>Bubble Wrap Making Machine</b>
+								</p>
+								<ul>
+									<li>This machine creates bubble wrap from a single roll of double-layer plastic, filling air in equidistant spots, and sealing the wrap with heat to form another roll of bubble bubble wrap. The machine uses two rollers, one where it pulls the double-layer plastic from, and the other where the final product of bubble wrap is stored. The plastic wrap goes through a few rollers, where first air is injected by one of 13 air tubes, and then immediately sealed by another roller that is heated. The rollers are just cylinders that are anchored on one side. It operates by itself until the source plastic is emptied. The machine itself is not in a protected enclosure, and so the plastic is just slotted in, like magnetic tape in a player, or like the tape in a cassette.</li>
+									<ul>
+										<li>
+											<b>Source:</b> <a href="https://www.reddit.com/r/specializedtools/comments/m5224j/this_bubble_wrap_machine/" target="_blank" title="Click this link to open it in a new page.">"This Bubble Wrap Machine" by The_Tech_Monkey on reddit &#10138;</a>.
+										</li>
+										<li>
+											<b>Reflection:</b> My main strategy in the above explanation is to work through the steps of the process, as well as increase the depth of the explanations in each new sentence. I also used imagery and analogy to describe the machine. Rereading it myself, outloud, I think it makes sense.
+										</li>
+									</ul>
+								</ul>
+							</div>
+						</div>
+						<p class="mb-5">
+							Personally, I feel as if my explanation for the Personal Elevator Vehicle is better, as it's easier to relate to a firetruck's ladder system, which most people have seen, one way or another.
 						</p>
-						<ul>
-							<li>Imagine if you had to move into a high-rise apartment -- that does not have an elevator -- in a narrow street, how would you go about it? Your best bet is to raise your heavy furniture or other goods with a Portable Vehicle Delivery Elevator. It is hitched and towed with your moving truck. When you arrive at your destination, strong stabilizers are extended along each side of the elevator, and make contact with the road at an acute angle, which helps keep the elevator stable. Then, like a fireman’s ladder, the backbone of the elevator extends to the window of your apartment. Then, a flat, seat-like car goes up the backbone to your apartment window, where your furniture and goods can be easily moved in. Then, the car goes back down the backbone to pick up more goods. The reverse of this process happens for if or when you move out.</li>
-							<ul>
-								<li>
-									<b>Source:</b> <a href="https://www.reddit.com/r/specializedtools/comments/m1dbov/machine_for_helping_people_move_in_small_towns/" target="_blank" title="Click this link to open it in a new page.">"Machine for helping people move in small towns" by fibeep on reddit</a>
-								</li>
-								<li>
-									<b>Reflection:</b> My approach here for this second specialized tool was to explain it like I would to a friend. Hooking them in with why you would need it. Then some technical description followed by analogies of backbone and firemen’s ladder. I think the more informal explanation here helps.
-								</li>
-							</ul>
-						</ul>
 						<hr>
 						<h2 id="pi-2">
-							Shell Signage Revision
-							<span class="badge badge-primary">Prompt</span>
+							Shell Signage Revision&nbsp;
+							<span class="badge badge-primary">Prompt</span>&nbsp;
 							<a href="#pi-2" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
 						<p class="mb-4">
-							.................
+							How can we make the instructions for accessible self-serve gas pumps easier to read, see, and understand? Accessible gas pumps are the law under the ADA. Note that a gas station can choose how the patron should signal to get the attendant’s attention. Honking is one option. Technical documents should be concise and usable (scannable, accessible, readable), and this Shell has none of those qualities.
 						</p>
+						<div class="row mb-2">
+							<div class="col">
+								<h5 class="text-center">
+									Original
+								</h5>
+							</div>
+							<div class="col">
+								<h5 class="text-center">
+									Revised
+								</h5>
+							</div>
+						</div>
 						<div class="row mb-3">
 							<div class="col">
 								<figure class="figure">
-									<img src="rsc/prompt-2-accessibility-PROF_PIC.png" class="img-fluid" alt="Incomprehensible Gas Pump Sign" loading="lazy">
+									<img src="rsc/prompt-2-accessibility-PROF_PIC.png" class="img-fluid rounded" alt="Incomprehensible Gas Pump Sign" loading="lazy">
 									<figcaption class="figure-caption">Fig 1.  Original image of a Shell gas station warning sign.  Provided by the Professor royalty free.</figcaption>
 								</figure>
 							</div>
 							<div class="col">
 								<figure class="figure">
-									<img src="rsc/prompt-2-accessibility-MY_VERSION.png" class="img-fluid" alt="My Revised Gas Pump Sign" loading="lazy">
+									<img src="rsc/prompt-2-accessibility-MY_VERSION.png" class="img-fluid rounded" alt="My Revised Gas Pump Sign" loading="lazy">
 									<figcaption class="figure-caption">Fig 2.  My revised gas station sign.</figcaption>
 								</figure>
 							</div>
 						</div>
-						<p class="mb-5">
-							What I had done was move the important information to the top.  If a fire is starting, no one is going to read through several paragraphs of text to the 4.5th bullet point, to find a tiny 12 pt font text saying "<small>If a fire starts, do not remove the nozzle</small>".
+						<p>
+							What I had done was move the important information to the top.  If a fire is starting, no one is going to read through several paragraphs of text to the 4.5th bullet point, to find a tiny 12 pt font text saying "<small>If a fire starts, do not remove the nozzle</small>". That's just ridiculous.
 						</p>
+						<p>
+							Other changes I did include
+						</p>
+						<ul>
+							<li>removing fluff text.</li>
+							<li>adding more icons (all of which are royalty free).</li>
+							<li>using the more <a href="https://accessibleicon.org/">modern and progressive ADA logo (of the moving handi-capable person)</a>.</li>
+							<li>using the <a href="https://www.dafont.com/highway-gothic.font">Highway Gothic font</a> (that the US Department of Transportation uses) for readability at a distance.</li>
+							<li>capitalizing keywords.</li>
+						</ul>
+						<p class="mb-5">
+							Overall, I'm pleased with how this assignment turned out, and I think it's one of my best products from this semester.
+						</p>
+						<!-- BEGIN:  ORIGAMI INSTRUCTIONS -->
 						<hr>
 						<h2 id="pi-3">
-							Origami Instructions
-							<span class="badge badge-primary">Prompt</span>
+							Origami Instructions&nbsp;
+							<span class="badge badge-primary">Prompt</span>&nbsp;
 							<a href="#pi-3" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
 						<p>
-							<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+							For this prompt, I created a set of Origami instructions using graphics only. The only words allowed was our title. We were told that we can use numbers, design shapes, color, dotted lines, arrows, etc. No words in the instructions. Only design shapes created in a software program. No photos allowed.
 						</p>
+
+						<p class="mb-5">
+							As you can see ....
+						</p>
+						<!-- END:  ORIGAMI INSTRUCTIONS -->
+						<!-- BEGIN:  TECH TIP -->
 						<hr>
 						<h2 id="pi-4">
-							Tech Tip
-							<span class="badge badge-primary">Prompt</span>
+							Tech Tip&nbsp;
+							<span class="badge badge-primary">Prompt</span>&nbsp;
 							<a href="#pi-4" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
 						<p class="mb-4">
-							wweee
+							For this portfolio entry, we were told to create a software tech tip that resembles in form (but not in content) <a href="http://readingsounds.net/wp-content/uploads/courses/410-techwriting/TechTipExamples.pdf" target="_blank">one of these Tech Tip examples, which you can see on our Professor's website</a> [<a href="http://web.archive.org/web/20210519205156/http://readingsounds.net/wp-content/uploads/courses/410-techwriting/TechTipExamples.pdf" target="_blank">Archived</a>].  Using our own words, annotations (arrows, boxes), color/shading, and screenshots to create an easy-to-follow tech tip as a half-page instruction set (approximately 5” x 7”).
 						</p>
 						<figure class="figure">
-							<img src="rsc/prompt-4-tech-tip.png" class="img-fluid" alt="My tech tip on how to make a screen recording with NVIDIA ShadowPlay" loading="lazy">
+							<img src="rsc/prompt-4-tech-tip.png" class="img-fluid rounded" alt="My tech tip on how to make a screen recording with NVIDIA ShadowPlay" loading="lazy">
 							<figcaption class="figure-caption">Fig 3.  My tech tip on how to make a screen recording with NVIDIA ShadowPlay.</figcaption>
 						</figure>
+						<p class="mb-5">
+							I used Adobe Illustrator to create this short graphic, explaining how to make a screen recording with NVIDIA's ShadowPlay.  It's something that's not explained simply and quickly in currently available online YouTube tutorials.  I think my tech tip gets to the point, and makes it easy for a layperson to understand how to make a screen recording.
+						</p>
+						<!-- END:  TECH TIP -->
+						<!-- BEGIN:  DATA VIZ -->
 						<hr>
 						<h2 id="pi-5">
-							Data Viz
-							<span class="badge badge-primary">Prompt</span>
+							Data Visualization&nbsp;
+							<span class="badge badge-primary">Prompt</span>&nbsp;
 							<a href="#pi-5" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
 						<p class="mb-4">
-							embed
+							This prompt is designed to encourage us to reflect on the power of data visualization, and to explore different ways of visualizing the same data. We were told to pull some data from our university or elsewhere, and create two charts, completely marked up with axis labels, appropriate colors, and more, and then write a brief reflection.
 						</p>
+						<div class="row">
+							<div class="col-lg">
+								<figure class="figure">
+									<img src="rsc/prompt-6-dataviz-chart1.png" class="img-fluid rounded" alt="Badly 'Designed' Menu" loading="lazy">
+									<figcaption class="figure-caption">Fig ...............</figcaption>
+								</figure>
+							</div>
+							<div class="col-lg">
+								<figure class="figure">
+									<img src="rsc/prompt-6-dataviz-chart2.png" class="img-fluid rounded" alt="Badly 'Designed' Menu" loading="lazy">
+									<figcaption class="figure-caption">Fig ..............</figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="card mt-2 mb-5">
+							<div class="card-header bg-gray-2 text-white">
+								<b>Short Description</b> for this assignment <span class="text-secondary" title="Write a brief reflection on why you chose the visualizations you did and how those choices are the right ones to display this information.">(?)</span>
+							</div>
+							<div class="card-body bg-gray text-white">
+								<p>
+									It's pleasing because whatever
+								</p>
+							</div>
+						</div>
+						<!-- END:  DATA VIZ -->
+						<!-- BEGIN:  MENU REVISION -->
 						<hr>
 						<h2 id="pi-6">
-							Menu Revision
-							<span class="badge badge-primary">Prompt</span>
+							Bar Menu Revision&nbsp;
+							<span class="badge badge-primary">Prompt</span>&nbsp;
 							<a href="#pi-6" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
-						<p class="mb-4">
-							embed
+						<p class="mb-3">
+							Using the main principles of Contrast (hierarchy), Repetition (consistency, uniformity), Alignment (and the criticisms of centered alignments), and Proximity (things that are close together are assumed to be related), or CRAPs, we were toold to redesign a daily special menu.
 						</p>
+						<div class="row mb-2">
+							<div class="col">
+								<h5 class="text-center">
+									Original
+								</h5>
+							</div>
+							<div class="col">
+								<h5 class="text-center">
+									Revised
+								</h5>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col">
+								<figure class="figure">
+									<img src="rsc/prompt-7-Menu-SaturdaySpecials-Bucks.jpg" class="img-fluid rounded" alt="Badly 'Designed' Menu" loading="lazy">
+									<figcaption class="figure-caption">Fig 79.  Original image of a menu from a restaurant.  Provided by the Professor royalty free.</figcaption>
+								</figure>
+							</div>
+							<div class="col">
+								<figure class="figure">
+									<img src="rsc/prompt-2-accessibility-MY_VERSION.png" class="img-fluid rounded" alt="My Revised Gas Pump Sign" loading="lazy">
+									<figcaption class="figure-caption">Fig 2.  My revised menu.</figcaption>
+								</figure>
+							</div>
+						</div>
+						<!-- END:  MENU REVISION -->
+						<!-- BEGIN:  COLOR PALETTE -->
 						<hr>
 						<h2 id="pi-7">
-							Color Palette
-							<span class="badge badge-primary">Prompt</span>
+							Color Palette&nbsp;
+							<span class="badge badge-primary">Prompt</span>&nbsp;
 							<a href="#pi-7" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
 						<p class="mb-4">
-							embed
+							For this prompt, we were told to take some new photos and choose one that looks promising. Then from that photo, develop a color palette of 3-5 colors. We gave our palettes a name, and described it in words using some of the information in the Color chapter. We also wrote a short description that explains the palette in terms of color theory and harmony.
 						</p>
+						<figure class="figure">
+							<img src="rsc/prompt-10-palette.jpg" class="img-fluid rounded" alt="My Color Palette" loading="lazy">
+							<figcaption class="figure-caption">Fig 2.  ...............u.</figcaption>
+						</figure>
+						<div class="card mt-2 mb-5">
+							<div class="card-header bg-gray-2 text-white">
+								<b>Short Description</b> for this assignment
+							</div>
+							<div class="card-body bg-gray text-white">
+								<p>
+									It's pleasing because whatever
+								</p>
+							</div>
+						</div>
+						<!-- END:  COLOR PALETTE -->
+						<!-- BEGIN:  ELI5 -->
 						<hr>
 						<h2 id="pa-8">
-							ELI5 (Explain Like I'm 5)
-							<span class="badge badge-warning">Assignment</span>
+							ELI5 (Explain Like I'm 5)&nbsp;
+							<span class="badge badge-warning">Assignment</span>&nbsp;
 							<a href="#pa-8" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h4>
-						<p class="mb-4">
-							embed
+						<p>
+							The purpose of this assignment was to explain the same technical topic to three different audiences using words and images. It's inspired by <a href="https://www.reddit.com/r/explainlikeimfive/" target="_blank">the subreddit group Explain like I'm five</a>, and Randall Monroe’s book <i>Thing Explainer</i> (which explains technical topics with his drawings and only the "ten hundred words people use most"). We had to choose a technical or specialized topic that we know well and could research further. And we had to write this technical description or technical definition for three different audiences. One young audience (5th grade or below), one audience of our choice (I chose college students), and the third audience was <a href="https://splasho.com/upgoer5/" target="_blank" title="Link opens in a new tab">using the top 10,000 most used words, limited by the up-goer five text editor &#10138;</a>.
 						</p>
-						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+						<p class="mb-4">
+							<b>NOTE:</b> The image below is in a carousel. Use either the arrows half way down the image to tab through, or use the indicators at the bottom middle of the image.
+						</p>
+						<div id="carouselExampleIndicators" class="carousel slide rounded" data-ride="carousel">
 							<ol class="carousel-indicators">
 								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -249,88 +358,403 @@
 								<span class="sr-only">Next</span>
 							</a>
 						</div>
+						<div class="card mt-4 mb-3">
+							<div class="card-header bg-gray-2 text-white">
+								<b>Reflective Memo</b> for this assignment <span class="text-secondary" title="300-400 words. Think of it as a cover letter to the professor and a deep dive into your topic – why you chose your topic, how you defined each audience, how you addressed each audience (different strategies you used to explain the technical topic for each audience).">(?)</span>
+							</div>
+							<div class="card-body bg-gray text-white">
+								<pre class="text-white">
+    What is my fascination with heat pumps? They may just the old/new invention
+that can help save the world from climate change. They use a fraction of the
+energy of electric heating in homes, while also moving more energy. And the
+best part is that they are reversible. So, they can cool a home in the
+summer, and warm it up in the winter.
+    My three audiences were for young kids (about fifth grade level), college
+students (undergraduates), and the top ten hundred words list (UpGooer5). The
+young kids audience is the one I started working on first. In hindsight, I
+should’ve worked on the most complex audience first (College Students), then
+move progressively down to the easier (young kids) then easier audience (top ten
+hundred). Starting with the young kids though wasn’t the worst option.
+    I found the top ten hundred words audience the most difficult to work with.
+It is so limiting, and there’s not a lot of ways to relate the action of the
+heat pumps in about 400 words, or around that. I mean, you can rework the words
+into the UpGooer5 textbox, but the meaning and what it actually does is
+substantially lost. I understand that’s the point, but I just wanted to clearly
+state that I ran into a lot of trouble with it.
+    My main strategy was to relate the processes occurring using analogies. For
+the younger kids, I kept using the same analogy of ice cubes and stoves and
+radiating heat because a consistent analogy would most likely help a younger
+audience. Instead of switching to a different analogy for every part, I think a
+consistent analogy really helped. For the college students, I mainly just
+assumed a basic high school education and vocabulary, and tried relating the
+“higher”, more complex processes.
+    Overall, this was a very interesting assignment. I did spend a lot of time
+on the design, and couldn’t dedicate as much time as I’d like to special
+formatting, bolding, and underlining of the text. I hope the flow of it makes
+sense. I made sure the 1, 2, 3, 4, 5, and 6 layout made sense.</pre>
+							</div>
+						</div>
+						<p class="mb-5">
+							In retrospect, I wish I had more time to fine tune the text of this assignment. I still love how it turned out visually, and that I think makes it compelling in some regard.
+						</p>
 						<hr>
 						<h2 id="pa-9">
-							User Instructions
-							<span class="badge badge-warning">Assignment</span>
+							User Instructions&nbsp;
+							<span class="badge badge-warning">Assignment</span>&nbsp;
 							<a href="#pa-9" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
-						<p class="mb-4">
-							embed
+						<p>
+							For this assignment, we told to prepare written instructions on how to complete a sufficiently complex but well-defined technical task intended for a public audience. Evaluating and revising our instructions through usability/peer evaluation. Our topic was to address a real need and be based in the physical world (no software-only topics for this assignment).
+						</p>
+						<p>
+							Our instructions should not simply duplicate what’s already available online. While we may find similar instructions online, we should think hard about how you can create a new angle or approach in your instructions. Our materials, including any photos, must be originals created by us.
+						</p>
+						<p>
+							<a href="rsc/engl410_jvill-user-instructions_ORIGINAL.pdf" target="_blank" title="Link opens in a new tab.">Click this link here to see this PDF in its own tab. &#10138;</a>
 						</p>
 						<!-- 4:3 aspect ratio -->
 						<div class="embed-responsive embed-responsive-4by3">
 							<iframe class="embed-responsive-item" src="rsc/engl410_jvill-user-instructions_ORIGINAL.pdf" loading="lazy"></iframe>
 						</div>
+						<p class="mt-3">
+							<a href="rsc/engl410_jvill-user-instructions_ORIGINAL.pdf" target="_blank" title="Link opens in a new tab.">Click this link here to see this PDF in its own tab. &#10138;</a>
+						</p>
+						<p>
+							For this assignment, we had to create two versions of our instructions. One <b>original</b> version and one <b>inspired</b> version, inspired by an existing set of instructions. I only include a preview of the <b>original</b> one above because it just largely improves my <b>inspired</b> version. <a href="engl410_jvill-user-instructions_INSPIRED.pdf" target="_blank">If you want to see my original version, you can do so in a new tab by clicking here.</a> It includes a few more pages than the version shown above.
+						</p>
+						<div class="card mt-4 mb-3">
+							<div class="card-header bg-gray-2 text-white">
+								<b>Reflective Memo</b> for this assignment <span class="text-secondary" title="Reflective memo of 300-400 words. In your memo, explain how you defined your audience, how you approached your topic, how your instructions address a specific need in a novel way, etc.">(?)</span>
+							</div>
+							<div class="card-body bg-gray text-white">
+								<pre class="text-white">
+    My audience for this bird house user instructions manual was for any
+hobbyist or bird enthusiast wondering how to build a bird house. I, myself, am
+infatuated with Crows, all American, Hooded, African, and the like. I do
+regularly subscribe to r/Crows and follow any new pictures or research
+developments in the avian world. And I want to think that I understand the best
+bird house who wants to build a bird house is most likely over 20 years of age
+and has accessed to a Home Depot or basic woodworking equipment and lumber to
+build a bird house.
+    I approached my topic by researching existing guides from the Audubon
+Society and Cornell Ornithology, and what tips and recommendations they make. I
+tried my best to understand the instructions, as I do not have the time or
+resources to test them, as much as I would like to. And for my inspired version,
+I followed this Dishwasher Manual, along with many other appliance manuals that
+I’ve encountered in my lifetime. I found the monochrome look, simple 3D
+renderings, gray header boxes, and rounded fonts of Helvetica and Arial to be a
+style I wanted to emulate.
+    It took some time to build the 3D renders, and the initial inspired layout
+in Adobe Illustrator, but I think I achieved an honestly novel—emphasis on
+new—set of instructions on how to build bird houses. Using a 3D model that is
+kept mostly the same between pages as much as possible helps visualize where
+the screws and cutouts need to go.
+    The specific need that I am addressing is a simple, rugged, large font-size
+manual that could easily be sent along in a bird house making kit. Assuming the
+wood is precut, and the receiver just must drill screws in, they could easily
+read the table of contents on the second page and flip to the screw diagram.
+And it works from starting from scratch. Or, as a quick reference.
+    And I tried my best to make the original version as inventive as possible
+with a different layout, coordinate flat color scheme, and some shortened
+descriptions. It took about 15 hours on the first inspired version. The second
+original version condenses a lot of the information down from the first (it was
+one of the suggestions in my peer review), with the same changes I listed two
+sentences ago. I hope it is okay if I used the same images for both. I hope the
+effort comes across.</pre>
+							</div>
+						</div>
+						<p class="mb-5">
+							Overall, I think this assignment turned out really well. I am not the most proficient user of Blender, and it took me a few hours to make the basic bird house model that went into most of the slides. But I think it turned out well.
+						</p>
 						<!-- BEGIN: Mobile Health Project -->
 						<hr>
 						<h2 id="pa-10">
-							Mobile Health Project
-							<span class="badge badge-warning">Assignment</span>
+							Mobile Health Project&nbsp;
+							<span class="badge badge-warning">Assignment</span>&nbsp;
 							<a href="#pa-10" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
 						<p class="mb-2">
-							embed
+							For this assignment, we would be writing and redesigning UD’s HEALTH For All program website, and presenting our completed work to the Project Coordinator for this program. Specifically, we had to redesign three key web pages of the HEALTH For All website. To do this, we worked in groups of four on the website redesign. We were only allowed to use GoDaddy’s Website Builder and the photo and text resources made available by the Project Coordinator to redesign the site.
+						</p>
+						<p class="mb-2">
+							The following bullet points gives you the screenshots and the links to the actual websites.
 						</p>
 						<ul>
-							<li><a href="#pa-10-a">Click here to see the <b>original</b> website <b>screenshot</b> (below).</a></li>
-							<li><a href="#pa-10-b">Click here to see my <b>revised</b> website <b>screenshot</b> (further down).</a></li>
+							<li>
+								<b>Original:</b> Click to...
+								<ul>
+									<li>
+										<a href="#pa-10-a">see original screenshot (below).</a>
+									</li>
+									<li>
+										<a href="https://healthforallde.org/" target="_blank" title="Link opens in a new tab">see the original website. &#10138;</a>
+									</li>
+									<li>
+										<a href="http://web.archive.org/web/20210520015149/https://healthforallde.org/" target="_blank" title="Here is an archived in case the original website is updated. Opens in a new tab">see the archived website. &#10138;</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<b>Revised:</b> Click to...
+								<ul>
+									<li>
+										<a href="#pa-10-b">see the revised screenshot (below)</a>
+									</li>
+									<li>
+										<a href="https://healthforallde20.godaddysites.com/" target="_blank" title="Link opens in a new tab">see our revised website. &#10138;</a>
+									</li>
+								</ul>
+							</li>
 						</ul>
+						<p>
+							<b>NOTE:</b> These are long screenshots below of both the <b>original</b> and <b>revised</b> websites. To make sure you don't scroll over the edge of either screenshot, I added a <span class="badge badge-danger">End of Screenshot</span> badge to more easily differentiate between the <b>original</b> and <b>revised</b> screenshots.
+						</p>
+						<p>
+							<b>NOTE:</b> The link to the GoDaddy website (above) may expire at some point.
+						</p>
 						<h3 id="pa-10-a" class="mb-3">
-							Original Website from Client
+							Original Website from Client&nbsp;
 							<a href="#pa-10-a" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h3>
-						<p class="text-center display-4">
-							<span class="badge badge-danger">Begin Screenshot</span>
-						</p>
 						<figure class="figure mb-5">
-							<img class="d-block w-100" src="rsc/screencapture-healthforallde-org-2021-05-19-12_31_31.png" alt="First slide" loading="lazy">
+							<img class="border border-primary rounded d-block w-100" src="rsc/screencapture-healthforallde-org-2021-05-19-12_31_31.png" alt="First slide" loading="lazy">
 							<figcaption class="figure-caption">Fig 22.  A screen capture of the original HealthForAllDE website.</figcaption>
 						</figure>
-						<p class="text-center display-4">
-							<span class="badge badge-danger">End Screenshot</span>
+						<p class="text-center display-4" title="This is included here so that you know where one screenshot ends and another begins.">
+							<span class="badge badge-danger">End of Screenshot</span>
 						</p>
-						<h3 id="pa-10-b" class="mb-3">
-							My Group's Revised Website
+						<h3 id="pa-10-b" class="mt-5 mb-3">
+							My Group's Revised Website&nbsp;
 							<a href="#pa-10-b" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h3>
-						<p class="text-center display-4">
-							<span class="badge badge-danger">Begin Screenshot</span>
-						</p>
 						<figure class="figure">
-							<img class="d-block w-100" src="rsc/screencapture-healthforallde20-godaddysites-2021-05-19-12_31_06.png" alt="Second slide" loading="lazy">
+							<img class="border border-primary rounded d-block w-100" src="rsc/screencapture-healthforallde20-godaddysites-2021-05-19-12_31_06.png" alt="Second slide" loading="lazy">
 							<figcaption class="figure-caption">Fig 23.  A screen capture of our revised website.</figcaption>
 						</figure>
-						<p class="text-center display-4">
-							<span class="badge badge-danger">End Screenshot</span>
+						<p class="text-center display-4" title="This is included here so that you know where one screenshot ends and another begins.">
+							<span class="badge badge-danger">End of Screenshot</span>
+						</p>
+						<div class="card mt-4 mb-3">
+							<div class="card-header bg-gray-2 text-white">
+								<b>Workload Report</b> for this assignment <span class="text-secondary" title="Explain the decisions you made (content, design) and why these decisions have produced effective, persuasive, informative, and visually engaging documents.">(?)</span>
+							</div>
+							<div class="card-body bg-gray text-white">
+								<pre class="text-white">
+    I designed the home page of our website, single handedly.  First, I took an
+image from the MHV launch meeting, and I used it because I think it looked very
+professional and clean.  Because of the white text for the “In Delaware” and nav
+links--and because of GoDaddy’s limitations--I had to add a black gradient to
+the top and bottom of the meeting image to make the text readable.  I also added
+a Call to Action button, with a “See Our Community Partners” button because that
+seems to be what most users would want to know.  Most users would likely want to
+know where to get medical support through their local community partners.  About
+70% of small business websites do not have a Call to Action button, which can be
+useful for new users [1].
+    My next big decision was to include the mission statement, history, and
+program report highlights and full program reports on the homepage.  About 50%
+of users to a website do not click into another page of a website [2].
+This means most users will only see the homepage.  Every time a user has to
+click to a new page, they are less likely to see other pages of the website,
+even if a website provides a really important product or service they need.  So,
+I believe having all this information on the front page (reorganized and
+condensed) is beneficial for the user experience.  The mission statement could
+have been edited to be less vague, and the history section could be trimmed down
+and highlight their accomplishments better.  But I wanted to preserve
+Christine’s writing as is, since that’s something core and critical to the
+website that you would want to work directly with the client to improve it.
+    Overall, I think the changes I did on the homepage were substantial and
+mostly effective.  I think the photo choices are better.  And had there been
+more time, I would have revised all of the writing on the website.  But as it
+stands, I think it’s a large improvement on the original HealthForAll site.</pre>
+								<p>Sources</p>
+								<ul>
+									<li>[1]: <a href="https://www.sweor.com/firstimpressions" target="_blank" title="Click to open this link in a new tab.">27 Eye-Opening Website Statistics [Updated for 2021] by sweor.com</a>.</li>
+									<li>[2]: <a href="https://www.gorocketfuel.com/the-rocket-blog/whats-the-average-bounce-rate-in-google-analytics/#:~:text=As%20a%20rule%20of%20thumb,%2C%20news%2C%20events%2C%20etc." target="_blank" title="Click to open this link in a new tab.">Good, Bad, Ugly, and Average Bounce Rates | The Rocket Blog by gorocketfuel.com</a>.</li>
+								</ul>
+							</div>
+						</div>
+						<p class="mb-5">
+							While this assignment was challenging to do as a group project (and remotely during COVID), I think it turned out well. And one point of pride is that it was different from many of the other groups' homepages.
 						</p>
 						<!-- END:  Mobile Health Project -->
 						<!-- BEGIN:  SCREENCAST VIDEO -->
 						<hr>
 						<h2 id="pa-11">
-							Screencast Video
-							<span class="badge badge-warning">Assignment</span>
+							Screencast Video&nbsp;
+							<span class="badge badge-warning">Assignment</span>&nbsp;
 							<a href="#pa-11" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
 						</h2>
 						<p class="mb-4">
-							embed
+							How often do you go straight to YouTube to get help on using a software program? Technical communication is dominated by video-based help. For this assignment, we were told to explain how to complete a software task (e.g. how to do something specific and useful in PowerPoint, Excel, After Effects, or another software program we know well). We created a screencast video, in which we will described doing something on the computer while recording ourselves doing it
 						</p>
 						<!-- 16:9 aspect ratio -->
 						<div class="embed-responsive embed-responsive-16by9">
 							<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/62JZImLe6Qw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
+						<div class="card mt-4 mb-3">
+							<div class="card-header bg-gray-2 text-white">
+								<b>Reflective Memo</b> for this assignment <span class="text-secondary" title="Reflective memo of 300-400 words. In your memo, explain how you defined your audience, how you approached your topic, how your instructions address a specific need in a novel way, etc.">(?)</span>
+							</div>
+							<div class="card-body bg-gray text-white">
+								<pre class="bg-gray text-white">
+    For our last project, I am very jazzed to be doing a tutorial, and I am
+jazzed in how well it turned out.  My original recording was about 30 minutes in
+length.  My first cut trimmed it down to 12:30, then 11:30, then 7:29.  After
+reading some suggestions from my peer reviews, I realized some steps were more
+complicated than they needed to be.  And after replacing two overly long steps
+(you can tell where the cuts are based on when a clip has a suddenly, quieter
+voice over), I was able to trim down my video to 5:54 in length.  I realize that
+is really stretching the “about 5 minutes” maximum time limit requirement in the
+instructions, but my video is on a complex topic.
+    In retrospect, I probably should have chosen an easier topic.  I was worried
+about choosing a topic too niche or too easy to cover.  But!  To be fair, no one
+has ever covered my topic (as far as I can tell with Google search results), and
+almost all students in my other classes use OCR’d PDFs, all the time.  In my
+Philosophy classes, I am using an OCR PDF of our textbooks to search for quotes,
+authors, and other critical lines.  And I do not need to speak ad nauseum about
+the obvious time saving benefits of that.
+    It has taken me about a year to discover the method I present in the video.
+First, it took me months to understand that Tesseract only works on images to
+produce a single OCR PDF.  Then, ImageMagick is a great utility to convert
+non-OCR PDFs to images for Tesseract.  But the ImageMagick website does not say
+that it needs GhostScript, but it does need it to run, and it throws a cryptic
+error message if you do not have it.  Then, I had to find a Python library to
+combine the individual OCR PDF pages into one, combined OCR PDF, and write a
+script (myself) to put it all together.
+    Other people have used Tesseract and made tutorials on it, but no one has
+fully connected the dots on how to take a normal PDF and make it to a full OCR
+PDF.  I think this will be massively helpful to anyone that finds it.  I will
+leave it published on YouTube at this link [1].  You can monitor how well (or
+bad) it does in ratings and views.
+    In terms of the YouTutorial guidance, I think I hit accessibility,
+viewability, accuracy, completeness, and pertinence.  My confidence could be
+better by having smoother speaking tone, and not having my microphone maxed
+most of the time.  Timing was a little rough in some parts where drastic edits
+had to be done.  But otherwise, I think it is watchable.  I use a heavy amount
+of zooms, pans, highlights, and text overlays to not overload a viewer, but to
+give just the right amount of information.  Additionally, on YouTube, I was
+able to add in timecodes, so in the progress or timeline bar, you will see it is
+fragmented based on section of the video that you are in.  You can even click
+where it says “Introduction >” or “GhostScript >” and see the other chapters,
+or just open the description and see the timecodes.
+    [Screenshot of video description].
+    Pasted above is the description that I put on YouTube.
+    My intended audience is for people with little to no technical knowledge
+installing all the software necessary to make an easy, automatic OCR application
+on their computer.  And while I am biased and in Computer Science, and I would
+say the tutorial is fairly thorough, it will be interesting to see how
+non-computer minded folks fair with the instructions.
+    Anyhow, thank you for a great semester, Professor Zdenek, and I hope you
+have a great summer!</pre>
+							<p>Sources</p>
+							<ul>
+								<li>[1]: <a href="https://youtu.be/62JZImLe6Qw" target="_blank" title="Click to open this link in a new tab.">How to make OCR PDFs on Windows using Tesseract</a> by me.</li>
+							</ul>
+							</div>
+						</div>
 						<p class="mb-5">
 							eeewewf
 						</div>
 						<!-- END:  SCREENCAST VIDEO -->
+						<hr>
+						<h2 id="conclusion">
+							Conclusion
+							<a href="#conclusion" title="Click here to get a direct link to this sub-heading." class="text-secondary">#</a>
+						</h2>
+						<p class="mb-5">
+							Thank you for reading through my entire portfolio! I know this is a long webpage.
+						</p>
+						<hr>
+						<p class="text-center text-secondary">
+							Copyright James Villemarette &copy; 2021, unless otherwise noted where images and other content comes from my Professor or other online sources.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade text-dark" id="tableOfContentsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Table of Contents</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="modal-body">
+						<p>
+							Click any of the links below to go to that section, directly.
+						</p>
+						<p>
+							The button that is <span class="bg-primary text-white">highlighted</span> indicates where you currently are in tihs webpage.
+						</p>
+						<div id="list-example" class="list-group">
+							<a class="list-group-item list-group-item-action" href="#introduction">
+								Introduction
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pi-1">
+								Special Tools
+								<span class="badge badge-primary">P</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pi-2">
+								Shell Signage
+								<span class="badge badge-primary">P</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pi-3">
+								Origami
+								<span class="badge badge-primary">P</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pi-4">
+								Tech Tip
+								<span class="badge badge-primary">P</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pi-5">
+								Data Viz
+								<span class="badge badge-primary">P</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pi-6">
+								Bar Menu
+								<span class="badge badge-primary">P</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pi-7">
+								Color Palette
+								<span class="badge badge-primary">P</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pa-8">
+								ELI5
+								<span class="badge badge-warning">A</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pa-9">
+								Manual
+								<span class="badge badge-warning">A</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pa-10">
+								Mobile Health
+								<span class="badge badge-warning">A</span>
+							</a>
+							<a class="list-group-item list-group-item-action" href="#pa-11">
+								Screencast
+								<span class="badge badge-warning">A</span>
+							</a>
+						</div>
+						<h5 class="mt-3">Miscellaneous</h5>
+						<p>
+							<a href="../../" class="regular-a">Click here to see my personal website.</a>
+						</p>
+						<p>
+							<b>NOTE:</b> You can click outside of this white modal to close it, in addition to the close button (below) and <code>X</code> button (above).
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<script type="text/javascript">
 			$(function() {
-				//console.log("Scrollspy enabled");
-				//$('body').scrollspy({ target: '#list-example' });
+				console.log("Tooltips enabled");
+				$('[data-toggle="tooltip"]').tooltip();
 			});
 		</script>
 	</body>
