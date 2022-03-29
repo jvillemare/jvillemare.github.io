@@ -1,8 +1,18 @@
 # jvillemare.github.io
 
-Hey! Funny seeing you here. This is my personal website. Thank you kindly, GitHub, for the free hosting.
+This is my personal website. It's a little better to see it as intended:
 
- - [See my happenings/activity/whatever here.](https://villemarette.me/)
- - [I also write! Here's my blog index.](https://villemarette.me/blog)
+[https://villemarette.me](https://villemarette.me/)
 
-After about two years, it's finally at a stage that I like.
+and because I know DNS rules
+
+[https://james.villemarette.me](https://james.villemarette.me/)
+
+**NOTE**: Most of the `/ud/` pages are basic HTML because I like the aesthetic.
+
+## Thanks
+
+ - My parents
+ - CloudFlare for making my website faster
+ - GitHub for freely hosting this
+ - Bootstrap
