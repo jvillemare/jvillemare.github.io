@@ -1,0 +1,53 @@
+# Projects
+
+This is a summary of all completed projects I have done, or are currently working on. 
+This is in chronological order from newest to oldest.
+
+ - ## [storybook](https://github.com/BITNULLS/storybook)
+    - **August 2021 to present**
+    - Making a motivational storybook viewing web application to track user performance metrics for use in scientific studies.
+    - Senior Design Project done in two semester with a team of 7 at the University of Delaware
+ - ## [Technical Writing Portfolio](https://villemarette.me/ud/engl410/)
+    - **Spring 2021**
+    - Includes all of the written and graphical assignments from my ENGL 410 course at the University of Delaware
+    - Communication is a vitally important skill, both internally in a team or externally with any product, and I am proud of what I accomplished during my course.
+ - ## [vipflie](https://github.com/jvillemare/vipflie)
+    - **Spring 2021**
+    - For CISC 387 (VIP: FLIE III), a project based class with drones that involves undergrads and grads working together
+    - I made a script to separate a rotating public street camera in Newark, DE into different angles for use in a project analyzing traffic
+ - ## [Crow: Web App Music Player](https://github.com/474-SEGFAULTS/crow)
+    - **Fall 2020**
+    - For CISC 474 (Advanced Web Technologies), we used Angular to make a music player web application
+    - I worked on the helper functions, and organized the components of the web app
+ - ## [Chickens Web Game](https://github.com/474-SEGFAULTS/Chickens)
+    - ![Landing page of a web game called Chickens](https://github.com/474-SEGFAULTS/Chickens/raw/master/rsc/img/titlescreen.png)
+    - **Fall 2020**
+    - For CISC 474 (Advanced Web Technologies), we worked on making a platformer game in vanilla JavaScript
+    - I made the tile and block based system for rendering the game
+ - ## [Aloe-Ha: Garden Plot Designer](https://github.com/jvillemare/aloe-ha)
+    - ![Initial loading screen of our garden plot designer application](https://github.com/jvillemare/aloe-ha/raw/master/docs/readme-screenshots/screenshot1.png)
+    - **Spring 2020**
+    - Coordinated issues and development on a software engineering class project to develop a JavaFX-based garden plot designer
+    - I helped developed the autorating algorithms, Python scrapers to gather plant data as JSONs, structuring the API of the project, and reviewed all pull requests
+ - ## [TensorFlow: YoUDee Finder](https://github.com/jvillemare/youdee-finder/)
+    - ![University of Delaware mascot laying down](https://github.com/jvillemare/jvillemare.github.io/blob/master/rsc/img/youdee-finder-compressed.jpg?raw=true)
+    - **Spring 2020**
+    - I trained a TensorFlow machine learning model to identify my university mascot, YoUDee, with a high degree of accuracy, from different angles, and with few false positives
+ - ## [Operating Systems Course Work](https://github.com/jvillemare/cisc361-workspace)
+    - **Spring 2020**
+    - For CISC 361 (Operating Systems), this is all of my course work for that class 
+ - ## [Data Structures Course Work](https://github.com/jvillemare/cisc220-workspace)
+    - **Fall 2019**
+    - For CISC 220 (Data Structures), this is all of my course work for that class
+ - ## [SudokuBLL](https://github.com/jvillemare/CISC181-Sudoku)
+    - **Spring 2019**
+    - For CISC 181 (Intro. to Computer Science II), we used Java and JavaFX to make a Sudoku game
+    - I did most of the work in this group project, organizing the work and issues, working on the core code, and helping my team members 
+ - ## [Open Internet Courts](https://open.internetcourts.net/pages/about)
+    - **Summer 2017 to Spring 2019**
+    - Developed, from scratch, a unique, progressive web application that facilitates a mock-court system, complete with cases, appeals, lawyers, judge, tips, reports, inboxes, and other systems
+    - Implemented web standards include REST, OAuth login, Push Notifications, and user-side caching
+    - Created using Bootstrap and jQuery. Hosted on AWS S3, EC2, and RDB
+ - ## [Flint Hill: SUAS Competition](https://github.com/FlintHill/SUAS-Competition)
+    - **2017 to 2018**
+    -  
